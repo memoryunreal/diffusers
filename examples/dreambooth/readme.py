@@ -23,8 +23,10 @@ accelerate launch train_dreambooth.py \
   --push_to_hub
 """
 
+
 """
-CUDA_VISIBLE_DEVICES=7 python train_dreambooth.py   --pretrained_model_name_or_path=CompVis/stable-diffusion-v1-4    --instance_data_dir=dog   --output_dir=/home/ssd3/lz/dataset/trained_checkpoint/dreambooth/   --instance_prompt="a photo of sks dog"   --resolution=512   --train_batch_size=1   --gradient_accumulation_steps=1 --learning_rate=5e-6   --lr_scheduler="constant"   --lr_warmup_steps=0   --max_train_steps=400 
+train dreambooth
+CUDA_VISIBLE_DEVICES=7 python train_dreambooth.py   --pretrained_model_name_or_path=CompVis/stable-diffusion-v1-4    --instance_data_dir=dog   --output_dir=/home/ssd3/lz/dataset/trained_checkpoint/dreambooth/dog/   --instance_prompt="a photo of sks dog"   --resolution=512   --train_batch_size=1   --gradient_accumulation_steps=1 --learning_rate=5e-6   --lr_scheduler="constant"   --lr_warmup_steps=0   --max_train_steps=400 
 """
 from diffusers import StableDiffusionPipeline
 import torch
